@@ -110,7 +110,6 @@
 //   alert("Goodbye");
 // }
 
-
 // 6. При завантаженні сторінки користувачу у prompt пропонується ввести число від 0 до 59 'Hello, enter please the number between  0 and 59'.
 
 //Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59). Якщо число не відповідає виведіть
@@ -129,8 +128,6 @@
 
 // 46 - 59 4та чверть
 
-
-
 // let inputValue = prompt("Hello, enter please the number between  0 and 59");
 
 // if (Number(inputValue) >= 0 && Number(inputValue) <= 15 ) {
@@ -146,15 +143,11 @@
 //     alert(`Number ${inputValue} refers to 4 quarters`);
 // }
 
-
-
 // 7. Дано рядок, що складається із символів, наприклад, 'a1abcde'.
 
 // Перевір, що першим символом цього рядка є літера 'a'.
 
 // Якщо так - виведи 'yes' у консоль, в противному випадку виведи 'no'.
-
-
 
 //
 
@@ -168,3 +161,97 @@
 // const firstSymbol = str[0] === 'a' ? 'yes' : 'no';
 // console.log(firstSymbol);
 // //
+
+// 8. Напишіть функцію, яка приймає два параметри довжину і елемент-заповнювач та повертає масив з вказаною довжиною і заповнює його переданим елементом
+
+// наприклад, виклик функції fillArray(3, 'a') має повернути масив ['a', 'a', 'a']
+
+// function fillArray(num, symbol) {
+//   const array = [];
+
+//   for (let i = 0; i < num; i += 1) {
+//     array.push(symbol);
+//   }
+//   console.log(array);
+// }
+
+// fillArray(3, "a");
+
+/// 9. Написати функцію, яка буде видаляти з масива усі значення, які приводяться до false
+
+// undefined, null, false, '', 0, NaN
+
+//
+
+// const array = [
+//   1,
+
+//   0,
+
+//   54,
+
+//   "doc",
+
+//   null,
+
+//   "jpg",
+
+//   undefined,
+
+//   "",
+
+//   "png",
+
+//   "exe",
+
+//   false,
+
+//   "mp4",
+
+//   NaN,
+
+//   "hbs",
+// ];
+
+// function clearArray(array) {
+//   const newArray = [];
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (!array[i]) continue;
+//     newArray.push(array[i]);
+//   }
+//   console.log(newArray);
+// }
+
+// clearArray(array);
+
+// Homework
+
+// 10. Проверить два массива и узнать, равны ли они
+
+// const arr1 = [1, 4, 6, 'color', 324, 232, 'list', 11, 9, 'dream', 34, 0, -30];
+// const arr2 = [6, 'dream', -30, 11, 9, 1, 324, 34, 'color', 4, 232, 0, 'list'];
+
+// const arr3 = [4, 232, 6, -30, 'color', 324, 'list', 1, 11, 9, 'dream', 34, 0];
+// const arr4 = ['color', 6, -30, 11, 9, 1, 'dream', 324, 34, 4, 232, 0, 'list'];
+
+// const arr5 = [1, 4, 6, 'color', 'list', 11, 9, 'dream', 34, 0, -30, 'lesson'];
+// const arr6 = [6, 324, 'dream', -30, 9, 8, 34, 'color', 4, 232, 0, 'list', 11];
+
+// const arr7 = [1, 4, 6, 'color', 324, 232, 'list', 11, 9, 'dream', 34, 0, -30];
+// const arr8 = [6, 'dream', -30, 10, 9, 1, 324, 34, 'color', 4, 232, 0, 'list'];
+
+// const compareArrays = function (firstArray, secondArray) {
+//   if (firstArray.length !== secondArray.length) return false;
+
+//   for (let index = 0; index < firstArray.length; index += 1) {
+//     const element = firstArray[index];
+//     if (!secondArray.includes(element)) return false;
+//   }
+
+//   return true;
+// };
+
+// console.log(compareArrays(arr1, arr2));
+// console.log(compareArrays(arr3, arr4));
+// console.log(compareArrays(arr5, arr6));
+// console.log(compareArrays(arr7, arr8));
