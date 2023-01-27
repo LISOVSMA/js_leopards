@@ -109,3 +109,62 @@
 // } else {
 //   alert("Goodbye");
 // }
+
+
+// 6. При завантаженні сторінки користувачу у prompt пропонується ввести число від 0 до 59 'Hello, enter please the number between  0 and 59'.
+
+//Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59). Якщо число не відповідає виведіть
+
+//alert з повідомленням "The [number] is outside 0 and 59"
+
+// Визначте в яку чверть години попаде
+
+// це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у консоль, наприклад, "Number [number] refers to 2 quarters".
+
+// 0 - 15 1ша чверть
+
+// 16 - 30 2га чверть
+
+// 31 - 45 3тя чверть
+
+// 46 - 59 4та чверть
+
+
+
+// let inputValue = prompt("Hello, enter please the number between  0 and 59");
+
+// if (Number(inputValue) >= 0 && Number(inputValue) <= 15 ) {
+//     alert(`Number ${inputValue} refers to 1 quarters`);
+// }
+// if (Number(inputValue) >= 16 && Number(inputValue) <= 30 ) {
+//     alert(`Number ${inputValue} refers to 2 quarters`);
+// }
+// if (Number(inputValue) >= 31 && Number(inputValue) <= 45 ) {
+//     alert(`Number ${inputValue} refers to 3 quarters`);
+// }
+// if (Number(inputValue) >= 46 && Number(inputValue) <= 59 ) {
+//     alert(`Number ${inputValue} refers to 4 quarters`);
+// }
+
+
+
+// 7. Дано рядок, що складається із символів, наприклад, 'a1abcde'.
+
+// Перевір, що першим символом цього рядка є літера 'a'.
+
+// Якщо так - виведи 'yes' у консоль, в противному випадку виведи 'no'.
+
+
+
+//
+
+// const str = "abcde";
+// if (str[0] === 'a') {
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }
+
+// const firstSymbol = str[0] === 'a' ? 'yes' : 'no';
+// console.log(firstSymbol);
+// //
