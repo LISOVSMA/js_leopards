@@ -1,16 +1,16 @@
 //TODO: оголошення функцій в js
 
+// console.log(fnDecl());
+
 function fnDecl() {
-  return 'function declaration';
+  return "function declaration";
 }
-// console.log(fnDecl())
+
+// console.log(fnExpr());
 
 const fnExpr = function () {
-  return 'function expression ';
+  return "function expression ";
 };
-// console.log(fnExpr())
 
-const arrowFn = () => {
-  return 'arrow function';
-};
-// console.log(arrowFn())
+const arrowFn = () => "arrow function";
+// console.log(arrowFn());

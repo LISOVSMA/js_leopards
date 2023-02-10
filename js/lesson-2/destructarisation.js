@@ -1,9 +1,9 @@
-'use strict';
+"use strict";
 //? Деструктуризація об'єктів
 
 // const user = {
-//   firstName: 'John',
-//   lastName: 'Reese',
+//   firstName: "John",
+//   lastName: "Reese",
 //   age: 30,
 //   isAdmin: true,
 // };
@@ -19,20 +19,20 @@
 
 // const { lastName, firstName, ...anotherProps } = user;
 
-// console.log('lastName: ', lastName);
-// console.log('firstName: ', firstName);
-// console.log('anotherProps: ', anotherProps);
+// console.log("lastName: ", lastName);
+// console.log("firstName: ", firstName);
+// console.log("anotherProps: ", anotherProps);
 
 //TODO:==========================
 //?  Глибока деструктуризація об'єктів
 
 // const team = {
 //   number: 4,
-//   flag: './images/flag.jpg',
-//   employees: ['Anton', 'Oleg', 'Ronnie', 'Carr'],
+//   flag: "./images/flag.jpg",
+//   employees: ["Anton", "Oleg", "Ronnie", "Carr"],
 //   langs: {
-//     original: 'uk',
-//     secondary: 'en',
+//     original: "uk",
+//     secondary: "en",
 //   },
 // };
 
@@ -43,28 +43,28 @@
 //   langs: { original: teamLangOriginal, secondary: teamLangSecondary },
 // } = team;
 
-// console.log('number: ', number);
-// console.log('flag: ', flag);
-// console.log('employees: ', employees);
+// console.log("number: ", number);
+// console.log("flag: ", flag);
+// console.log("employees: ", employees);
 
-// console.log('teamLangOriginal: ', teamLangOriginal);
-// console.log('teamLangSecondary: ', teamLangSecondary);
+// console.log("teamLangOriginal: ", teamLangOriginal);
+// console.log("teamLangSecondary: ", teamLangSecondary);
 
 //TODO:==========================
 //? Деструктуризація масивів
 
-// const names = ['Herbert Todd', 'Belle Soto', 'Roger Marsh', 'Ethan Lindsey'];
+// const names = ["Herbert Todd", "Belle Soto", "Roger Marsh", "Ethan Lindsey"];
 
 // const [user1, user2] = names;
 
 // console.log(user1);
-
-//TODO:==========================
+// console.log(user2);
+// TODO:==========================
 // const rgb = [210, 100, 50];
 
 // const [red, , blue] = rgb;
 
-// console.log(red);
+// console.log(red, blue);
 
 //TODO:==========================
 /*
@@ -80,6 +80,7 @@
 //   John: 100,
 //   Pete: 300,
 //   Mary: 250,
+//   Maria: 1000,
 // };
 
 /*
@@ -87,3 +88,25 @@
 */
 
 //? Створіть функцію.....
+
+// const topSalaries = function (salaries) {
+//   //   console.log(!Object.keys(salaries).length);
+//   if (!Object.keys(salaries).length) {
+//     return null;
+//   }
+//   const newArray = Object.entries(salaries);
+//   //   console.log(newArray);
+//   let max = newArray[0][1];
+//   //   console.log(max);
+//   let employeesName = newArray[0][0];
+//   //   console.log(employeesName);
+//   for (const [name, salaries] of newArray) {
+//     if (salaries > max) {
+//       max = salaries;
+//       employeesName = name;
+//     }
+//   }
+//   return employeesName;
+// };
+
+// console.log(topSalaries(salaries));

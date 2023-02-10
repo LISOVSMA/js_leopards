@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // ? Методи об'єкта і this при зверненні до властивостей у методах
 /**
@@ -11,32 +11,39 @@
 */
 
 // const filmDuna = {
-//   title: 'Duna',
+//   title: "Duna",
 //   description:
-//     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, necessitatibus?',
+//     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, necessitatibus?",
 //   rating: 10,
 //   actors: [
-//     'Rosetta Pena',
-//     'Clayton Crawford',
-//     'Larry Norton',
-//     'Georgia Garrett',
-//     'Jackson Ballard',
+//     "Rosetta Pena",
+//     "Clayton Crawford",
+//     "Larry Norton",
+//     "Georgia Garrett",
+//     "Jackson Ballard",
 //   ],
 //   adult: false,
 
-//   changeTitle(newTitle) {},
+//   changeTitle(newTitle) {
+//     this.title = newTitle;
+//   },
 
-//   addActor(newActor) {},
+//   addActor(newActor) {
+//     this.actors.push(newActor);
+//   },
 
-//   updateRating(newRating) {},
+//   updateRating(newRating) {
+//     this.rating = newRating;
+//   },
 
-//   isAdult() {},
+//   isAdult() {
+//     return console.log(this.adult);
+//   },
 // };
 
-// filmDuna.changeTitle('Venom');
-// filmDuna.addActor('Marguerite');
+// filmDuna.changeTitle("Venom");
+// filmDuna.addActor("Marguerite");
 // filmDuna.updateRating(9);
-
-// console.log(filmDuna.isAdult());
+// filmDuna.isAdult();
 
 // console.log(filmDuna);
