@@ -54,12 +54,12 @@
 //TODO:=========task-3=================
 // 4. Виправте помилки, щоб код працював
 // const product = {
-// ціна: 5000,
-// showPrice() {
-// console.log(price);
-// },
-//};
-// product.showPrice();
+//   price: 5000,
+//   showPrice() {
+//     console.log(product.price);
+//   }
+// };
+// console.log(product.showPrice());
 
 //TODO:=========task-4=================
 // Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
@@ -67,12 +67,21 @@
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
 // const obj = {
-//   name: 'Igor',
-//   car: 'Mercedes',
-//   carColor: 'black',
+//   name: "Igor",
+//   car: "Mercedes",
+//   carColor: "black"
 // };
 
-// console.log(getBool(obj, 'car')); // true
+// function getBool(obj, key) {
+//   const keys = Object.keys(obj);
+//   for (let key in keys) {
+//     if (obj === keys) {
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(getBool(obj, "car")); // true
 
 //TODO:=========task-5=================
 const filmoteka = [
@@ -86,9 +95,9 @@ const filmoteka = [
       "Cameron Clayton",
       "Viola Vasquez",
       "Lula Collins",
-      "Victor Nichols",
+      "Victor Nichols"
     ],
-    adult: false,
+    adult: false
   },
   {
     id: 2,
@@ -100,9 +109,9 @@ const filmoteka = [
       "Barry Curtis",
       "Blanche Rios",
       "Glen Perry",
-      "Logan Powers",
+      "Logan Powers"
     ],
-    adult: true,
+    adult: true
   },
   {
     id: 3,
@@ -114,9 +123,9 @@ const filmoteka = [
       "Lora Alvarez",
       "Jorge Simpson",
       "Thomas Hall",
-      "Darrell Hunter",
+      "Darrell Hunter"
     ],
-    adult: false,
+    adult: false
   },
   {
     id: 4,
@@ -128,9 +137,9 @@ const filmoteka = [
       "Mamie Myers",
       "Madge Townsend",
       "Ralph Kim",
-      "Jorge Reese",
+      "Jorge Reese"
     ],
-    adult: true,
+    adult: true
   },
   {
     id: 5,
@@ -142,27 +151,44 @@ const filmoteka = [
       "Melvin Burgess",
       "Jesus Reese",
       "Harriet Moreno",
-      "Curtis Cox",
+      "Curtis Cox"
     ],
-    adult: true,
-  },
+    adult: true
+  }
 ];
 
 //? Напишіть функцію getAllTitlesOfFilms(films), яка повертає масив із усіма назвами фільмів.
+
+// const getAllTitlesOfFilms = filmoteka.map((filmoteka) => filmoteka.title);
+// console.log(getAllTitlesOfFilms);
 
 //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
 
 //? Напишіть функцію getAdultFilms(films), яка повертає масив усіх дорослих фільмів.
 
+// function getAdultFilms(films) {
+//   let adultFilms = [];
+//   for (let film of films) {
+//     if (film.adult === true) {
+//       adultFilms.push(film);
+//     }
+//   }
+//   return adultFilms;
+// }
+// console.log(getAdultFilms(filmoteka));
+
 //? Напишіть функцію getNotAdultFilms(films), яка повертає масив усіх фільмів без обмеження.
+
+// const getNotAdultFilms = filmoteka.map((filmoteka) => filmoteka.description);
+// console.log(getNotAdultFilms);
 
 //TODO:=========task-6=================
 
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
 //  новий об'єкт без вказаного параметра. Очікуваний результат ({a: 1, b: 2}, 'b') => {a: 1}
 
-// console.log(updateObject({ a: 1, b: 2 }, 'b'));
-//https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
+// console.log(updateObject({ a: 1, b: 2 }, "b"));
+// https:coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
 
 //TODO:=========task-7=================
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
@@ -177,14 +203,16 @@ const filmoteka = [
 // https://question-it.com/questions/245501/kak-razbit-obekt-js-na-massiv-par-kljuch-znachenie
 
 // const user = {
-//   name: 'John',
-//   surName: 'Stones',
+//   name: "John",
+//   surName: "Stones",
 //   age: 20,
-//   hobby: 'tenis',
+//   hobby: "tenis",
 //   haveCar: true,
-//   merried: false,
+//   merried: false
 // };
-
+// Object.keys(user).map((key) => {
+//   console.log(key, user[key]);
+// });
 //! Array methods
 //TODO:=========task-9=================
 const users = [
@@ -198,7 +226,7 @@ const users = [
     balance: 2811,
     skills: ["ipsum", "lorem"],
     gender: "male",
-    age: 37,
+    age: 37
   },
   {
     id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
@@ -210,7 +238,7 @@ const users = [
     balance: 3821,
     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
     gender: "female",
-    age: 34,
+    age: 34
   },
   {
     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
@@ -222,7 +250,7 @@ const users = [
     balance: 3793,
     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
     gender: "male",
-    age: 24,
+    age: 24
   },
   {
     id: "249b6175-5c30-44c6-b154-f120923736f5",
@@ -234,7 +262,7 @@ const users = [
     balance: 2278,
     skills: ["adipisicing", "irure", "velit"],
     gender: "female",
-    age: 21,
+    age: 21
   },
   {
     id: "334f8cb3-eb04-45e6-abf4-4935dd439b70",
@@ -246,7 +274,7 @@ const users = [
     balance: 3951,
     skills: ["ex", "culpa", "nostrud"],
     gender: "male",
-    age: 27,
+    age: 27
   },
   {
     id: "150b00fb-dd82-427d-9faf-2879ea87c695",
@@ -258,7 +286,7 @@ const users = [
     balance: 1498,
     skills: ["non", "amet", "ipsum"],
     gender: "male",
-    age: 38,
+    age: 38
   },
   {
     id: "e1bf46ab-7168-491e-925e-f01e21394812",
@@ -270,39 +298,93 @@ const users = [
     balance: 2764,
     skills: ["lorem", "veniam", "culpa"],
     gender: "female",
-    age: 39,
-  },
+    age: 39
+  }
 ];
 
 //? Отримати масив імен всіх користувачів (поле name).
 
+// ((user) =const allName = users.map> user.name);
+// console.log(allName);
+
 //? Отримати масив об'єктів користувачів за кольором очей (eyeColor).
-// console.log(getUsersByColor(users, 'brown'));
-// console.log(getUsersByColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
+
+// const getUsersByColor = (users, color) =>
+//   [...users]
+//     .map((user) => ({ eyeColor: user.eyeColor }))
+//     .filter((user) => user.eyeColor.indexOf(color) !== -1);
+
+// console.log(getUsersByColor(users, "brown"));
+// console.log(getUsersByColor(users, "blue")); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 //? Отримати масив імен користувачів за статтю (поле gender)
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+
+// function getUsersWithGender(users, gender) {
+//   let adultName = [];
+
+//   for (const name of names) {
+//     if (users.gender === gender) {
+//       adultName.push(name);
+//     }
+//   }
+
+//   return adultName;
+// }
+
+// const getUsersWithGender = (users, gender) =>
+//   [...users].filter((user) => user.gender.includes(gender));
+
+// console.log(getUsersWithGender(users, "male")); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 //? Отримати масив тільки неактивних користувачів (поле isActive).
+
+// const getInactiveUsers = (users) =>
+//   [...users].filter((user) => user.isActive === false);
+
 // console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
 //? Отримати масив користувачів віком від min до max
+
+// const getUsersWithAge = (users, minAge, maxAge) =>
+//   [...users].filter((user) => user.age <= maxAge && user.age >= minAge);
 // console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
 //? Отримати загальну суму балансу (поле balance) всіх користувачів.
-// console.log(calculateTotalBalance(users)); // 20916
+
+// const calculateTotalBalance = [...users].reduce(
+//   (total, { balance }) => total + balance,
+//   0
+// );
+
+// console.log(calculateTotalBalance); // 20916
 
 //? Масив імен всіх користувачів, у яких є товарищь із зазначеним ім'ям.
-// console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
-// console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
+
+// const getUsersWithFriend = (users, friendName) =>
+//   [...users].filter((user) => user.friends.includes(friendName));
+// console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]
+// console.log(getUsersWithFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree Anthony' ]
 
 //? Масив імен (поле name) людей, відсортованих залежно кількості їх друзів (поле friends)
+
+// const getNamesSortedByFriendsCount = (users) =>
+//   [...users]
+//     .sort((a, b) => a.friends.length - b.friends.length)
+//     .map((user) => user.name);
+
 // console.log(getNamesSortedByFriendsCount(users));
+
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
 //? Отримати масив всіх умінь всіх користувачів (поле skills), при цьому не повинно бути
 // Уміння, що повторюються, і вони повинні бути відсортовані в алфавітному порядку.
+
+// const getSortedUniqueSkills = (users) =>
+//   [...users]
+//     .flatMap((user) => user.skills)
+//     .filter((skill, index, array) => array.indexOf(skill) === index)
+//     .sort();
 // console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
