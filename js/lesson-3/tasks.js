@@ -5,7 +5,23 @@
 //через prompt та викликає callback функцію
 //greet(name) - коллбек, що приймає ім'я і логірує в консоль
 //Рядок "Привіт <name>"
-//Реалізуй перевірку, що prompt не порожній
+//Реалізуй перевірку, що prompt не порожній (trim)
+
+// function letMeSeeYourName(callback){
+// let name = prompt('Введіть ваше імʼя');
+// if(name && name.trim()){
+//     callback(name)
+//     return;
+// }
+// alert('Імʼя не може бути порожнім')
+// }
+// function greet(userName){
+//     alert(`Привіт ${userName}`)
+// }
+
+// letMeSeeYourName(greet);
+
+
 
 //TODO:=================02=============================
 //Напишіть дві функції
@@ -16,6 +32,20 @@
 //Передаючи йому створений об'єкт.
 //showProduct(product) - коллбек приймаючий об'єкт
 //продукту і логірующий їх у консоль
+
+// function makeProduct(name, price, callback){
+// const id = Math.floor(Math.random() * 1000)
+// const product = { id, name, price }
+// callback(product)
+// }
+
+
+// function showProduct(product){
+//     console.log(`Товар ${product.id} : ${product.name} , ціна : ${product.price} грн.`)
+// }
+// makeProduct('Хліб', 30 , showProduct)
+// makeProduct('Молоко', 40 , showProduct)
+
 
 //TODO:=================03=============================
 // Напишіть функцію makeShef(shefName), яка повертає функцію
