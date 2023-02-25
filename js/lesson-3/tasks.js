@@ -51,14 +51,24 @@
 // Напишіть функцію makeShef(shefName), яка повертає функцію
 // makeDish(dish), що пам'ятає ім'я шефа при її виклику
 // Функція makeDish має логірувати "<shef> is cooking <dish>"
+// function makeShef(shefName){
+//     return function makeDish(dish){
+//         console.log(`${shefName} готує ${dish}`)
+//     }
+    
+// }
 
+// const shef1 = makeShef("Олександр");
+// const shef2 = makeShef("Іван");
+// shef1("біффштекс");
+// shef2("голубці & компот");
 //TODO:=================04=============================
 
 // Виправте помилки, щоб код працював
 // const product = {
 //     price: 5000,
 //     showPrice() {
-//         console.log(price)
+//         console.log(this.price)
 
 //     },
 // }
@@ -78,7 +88,7 @@
 //     action()
 // }
 
-// callAction(product.showPrice)
+// callAction(product.showPrice.bind(product))
 
 //TODO:=================06=============================
 //Напишіть функцію each(array, callback), яка
@@ -88,17 +98,41 @@
 //якого будуть результати виклику callback
 //callback функції повинна множити елементи на 2
 
-const array = [3, 5, 6, 34, 8, 83, 12, 34]
+// const array = [3, 5, 6, 34, 8, 83, 12, 34]
+// function each(arr, callback){
+// const newArray = [];
+// for(let i = 0; i < arr.length; i += 1){
+// newArray.push(callback(arr[i]));
+// }
+// return newArray;
+// }
+
+// console.log("newArray", each(array,(value) => value * 2));
+// console.log("array", array);
 
 //TODO:==================07============================
 //Напишіть функцію makeCounter, яка повертає іншу
 //функцію, яка вважає та логує кількість своїх викликів
 
+// function makeCounter (){
+// let counter = 0;
+// return () => (counter += 1) 
+// }
+// const result = makeCounter()
+// console.log(result());
+// console.log(result());
+// console.log(result());
 //TODO:==================08============================
 //Напишіть функцію savePassword(password), яка приймає
 //пароль і повертає внутрішню функцію, що приймає
 //рядок і повертає буль true, якщо рядок збігається зі збереженим
 //паролем і false - якщо не збігається
+// function savePassword(password){
+//     return (ourPassword) => ourPassword === password;   //true false    
+// }
+// const checkPassword = savePassword("supervisor");
+// console.log("edit = ", checkPassword("edit"));
+// console.log("supervisor = ", checkPassword("supervisor"));
 
 //TODO:====================09==========================
 //Напишіть функцію для зберігання знижки. Функція повертає
@@ -111,6 +145,8 @@ const array = [3, 5, 6, 34, 8, 83, 12, 34]
 // ? Знайдіть перше непарне число
 
 // const numbers = [2, 1, 6, 8, 9, 10, 12]
+// const oddNumber = numbers.find(number => number % 2 !== 0);
+// console.log(oddNumber)
 
 //TODO:==========================
 
@@ -203,18 +239,24 @@ const users = [
 
 //TODO:==========================
 // Отримати масив імен всіх користувачів (поле name).
-
+// console.log(users.map(user => user.name))
 //TODO:==========================
 // Отримати масив об'єктів користувачів за кольором очей (eyeColor).
+// const getUsersByColor = (usersAll, color) => usersAll.filter((el) => el.eyeColor === color)
 
 // console.log(getUsersByColor(users, 'brown'))
 // console.log(getUsersByColor(users, 'blue')) // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
-
+// console.log(getUsersByColor(users, 'green'))
 //TODO:==========================
 // Отримати масив імен користувачів за статтю (поле gender)
-
-// console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
-
+// const getUsersWithGender = (usersAll, gen) => {
+// return usersAll.reduce((acc, el) => {
+//     if(el.gender === gen) acc.push(el.name);
+//     return acc;    
+// }, []);
+// }
+// console.table(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+// console.table(getUsersWithGender(users, 'female'));
 //TODO:==========================
 // Отримати масив тільки неактивних користувачів (поле isActive).
 
@@ -239,7 +281,13 @@ const users = [
 
 //TODO:==========================
 // Масив імен (поле name) людей, відсортованих залежно кількості їх друзів (поле friends)
-
+// const getNamesSortedByFriendsCount = allUsers => {
+//     return [...allUsers]
+//         .sort((a, b) => a.friends.length - b.friends.length)
+//         .map((el) => el.name)
+//         .sort((a,b) => a.localeCompare(b))
+// }
+// console.table(getNamesSortedByFriendsCount(users));
 // console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
