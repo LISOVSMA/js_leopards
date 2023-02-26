@@ -28,7 +28,7 @@
 // console.log("Початковий масив:", numbers); // [2, 5, 35, 56, 12, 24, 7, 80, 3]
 
 //TODO:=========task-2=================
-//Напишіть функцію caclculateAverage()
+//* Напишіть функцію caclculateAverage()
 //яка приймає довільну кількість
 //аргументів і повертає їхнє середнє значення.
 //Додати перевірку, що аргументи це числа.
@@ -54,15 +54,15 @@
 //TODO:=========task-3=================
 // 4. Виправте помилки, щоб код працював
 // const product = {
-// ціна: 5000,
-// showPrice() {
-// console.log(price);
+// price: 5000,
+//   showPrice() {
+//   return this.price ;
 // },
-//};
-// product.showPrice();
+// };
+// console.log(product.showPrice());
 
 //TODO:=========task-4=================
-// Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
+//* Потрібно написати функцію, яка приймає 2 параметри obj і key, яка буде перебирати об'єкт.
 // Якщо об'єкт має такий ключ - поверне true
 // Є 2 варіанти рішення, спочатку напишемо функцію, потім вирішимо простим способом
 
@@ -71,7 +71,6 @@
 //   car: 'Mercedes',
 //   carColor: 'black',
 // };
-
 // console.log(getBool(obj, 'car')); // true
 
 //TODO:=========task-5=================
@@ -149,41 +148,56 @@ const filmoteka = [
 ];
 
 //? Напишіть функцію getAllTitlesOfFilms(films), яка повертає масив із усіма назвами фільмів.
+const getAllTitlesOfFilms = (films) => films.map(({title}) => title);
+// console.log("УСІ ФІЛЬМИ :", getAllTitlesOfFilms(filmoteka));
 
 //? Напишіть функцію findFilmByName(films, filmTitle), яка шукає фільм за назвою.
+const findFilmByName = (films, filmTitle) =>
+  [...films].find((film) => film.title === filmTitle);
+// console.log(getAdultFilms(filmoteka, 'Duna'));
 
 //? Напишіть функцію getAdultFilms(films), яка повертає масив усіх дорослих фільмів.
+const getAdultFilms = (films) => films.filter(({adult}) => adult);
+// console.log(getAdultFilms(filmoteka));
 
 //? Напишіть функцію getNotAdultFilms(films), яка повертає масив усіх фільмів без обмеження.
-
+const getNotAdultFilms = (films) => films.filter((film) => !film.adult);
+// console.log(getNotAdultFilms(filmoteka));
 //TODO:=========task-6=================
 
-// Напишіть функцію updateObject, яка приймає об'єкт та повертає
+//* Напишіть функцію updateObject, яка приймає об'єкт та повертає
 //  новий об'єкт без вказаного параметра. Очікуваний результат ({a: 1, b: 2}, 'b') => {a: 1}
-
-// console.log(updateObject({ a: 1, b: 2 }, 'b'));
-//https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
+// let updateObject = { a: 1, b: 2 };
+// const { b, ...rest } = updateObject;
+// updateObject = rest;
+// console.log(updateObject);
+// https://coderoad.ru/208105/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE-%D0%B8%D0%B7-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%B0-JavaScript
 
 //TODO:=========task-7=================
 // Напишіть функцію updateObject, яка приймає об'єкт та повертає
 // новий об'єкт без зазначених параметрів
 // Очікуваний результат ({a: 1, b: 2, c: 3}, 'b', 'a') => {c: 3}
 
-// console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'a'));
+let updateObject = { a: 1, b: 2, c: 3 };
+const { a, b, ...rest } = updateObject;
+updateObject = rest;
+
+// console.log(updateObject);
 
 //TODO:=========task-8=================
-// Напишіть функцію, яка приймає як параметр об'єкт
+//* Напишіть функцію, яка приймає як параметр об'єкт
 // та формує об'єкти у новому масиві у форматі [key, value]
 // https://question-it.com/questions/245501/kak-razbit-obekt-js-na-massiv-par-kljuch-znachenie
 
-// const user = {
-//   name: 'John',
-//   surName: 'Stones',
-//   age: 20,
-//   hobby: 'tenis',
-//   haveCar: true,
-//   merried: false,
-// };
+const user = {
+  name: "John",
+  surName: "Stones",
+  age: 20,
+  hobby: "tenis",
+  haveCar: true,
+  merried: false,
+};
+// Object.keys(user).forEach(key => { console.log("key:",key, "value:",user[key]) });
 
 //! Array methods
 //TODO:=========task-9=================
@@ -275,34 +289,62 @@ const users = [
 ];
 
 //? Отримати масив імен всіх користувачів (поле name).
+const getAllName = [...users].map((user) => user.name);
+// console.log(getAllName);
 
 //? Отримати масив об'єктів користувачів за кольором очей (eyeColor).
+const getUsersByColor = (users, color) =>
+  users.filter((user) => user.eyeColor === color);
 // console.log(getUsersByColor(users, 'brown'));
 // console.log(getUsersByColor(users, 'blue')); // [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]
 
 //? Отримати масив імен користувачів за статтю (поле gender)
+const getUsersWithGender = (users, gender) =>
+  users.filter((user) => user.gender === gender);
 // console.log(getUsersWithGender(users, 'male')); // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
 
 //? Отримати масив тільки неактивних користувачів (поле isActive).
+const getInactiveUsers = (users) => users.filter((user) => !user.isActive);
 // console.log(getInactiveUsers(users)); // [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]
 
 //? Отримати масив користувачів віком від min до max
+const getUsersWithAge = (users, minAge, maxAge) =>
+  users.filter((user) => user.age > minAge && user.age < maxAge);
 // console.log(getUsersWithAge(users, 30, 40));
 // [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]
 
 //? Отримати загальну суму балансу (поле balance) всіх користувачів.
+const calculateTotalBalance = (users) => {
+  return [...users].reduce(
+    (totalBalance, balanc) => totalBalance + balanc.balance,
+    0
+  );
+};
 // console.log(calculateTotalBalance(users)); // 20916
 
 //? Масив імен всіх користувачів, у яких є товарищь із зазначеним ім'ям.
+const getUsersWithFriend = (users, friendName) =>
+  users.filter((user) => user.friends.indexOf(friendName) !== -1);
 // console.log(getUsersWithFriend(users, 'Briana Decker')); // [ 'Sharlene Bush', 'Sheree Anthony' ]
 // console.log(getUsersWithFriend(users, 'Goldie Gentry')); // [ 'Elma Head', 'Sheree Anthony' ]
 
 //? Масив імен (поле name) людей, відсортованих залежно кількості їх друзів (поле friends)
+const getNamesSortedByFriendsCount = (users) => {
+  return [...users]
+    .sort((first, second) => first.friends.length - second.friends.length)
+    .map((user) => user.name);
+};
 // console.log(getNamesSortedByFriendsCount(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]
 
 //? Отримати масив всіх умінь всіх користувачів (поле skills), при цьому не повинно бути
 // Уміння, що повторюються, і вони повинні бути відсортовані в алфавітному порядку.
+const getSortedUniqueSkills = (users) => {
+  return [...users]
+    .flatMap((user) => user.skills)
+    .filter((skill, index, array) => array.indexOf(skill) === index)
+    .sort((a, b) => a.localeCompare(b));
+};
 // console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
@@ -313,3 +355,29 @@ const users = [
 // findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']); // === 'foo'
 // findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf']); // === 'abcd'
 // findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']); // === 'qwe'
+
+
+
+
+
+//? Тут на перебираючи методи масиву
+// Є масив віку собак
+// 1.Треба написати функцію calcAverageHumanAge, яка приймає масив віку собак (ages) і робить наступне
+// 2.Переводить  вік собак на людський вік, використовуючи наступну формулу: якщо вік собаки <= 2 роки, то humanAge = 2 * dogAge.Якщо вік собаки > 2 років, то humanAge = 16 + dogAge * 4
+// 3.Виключає всіх собак, які мають менше 18 людських років (тобто залишає собак мінімум від 18 років)
+// 4.Рахує середній людський вік усих собак
+
+// white_check_mark
+// eyes
+
+const ages = [5, 2, 4, 1, 15, 8, 3];
+// const ages2 = [16, 6, 10, 5, 6, 1, 4];
+const calcAverageHumanAge = (ages) =>
+  [...ages]
+    .map((age) => (age <= 2 ? age * 2 : 16 + age * 4))
+    .filter((age) => age >= 18)
+    .reduce((totalAge,age, i, array) => totalAge + age / array.length,0);
+
+// console.log(calcAverageHumanAge(ages));
+
+
