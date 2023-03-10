@@ -36,9 +36,24 @@
 //Додай метод getInfo(), який повертає рядок:
 //`Користувачеві ${} ${} років і в нього ${} публікацій.`
 
-// const polly = new User({ userName: 'Polly', age: 30, numbersOfPost: 15 })
-// console.log(polly)
-// polly.getInfo()
+// const User = function (userObject) {
+//     const { userName, age, numbersOfPost } = userObject;
+//     this.userName = userName;
+//     this.age = age;
+//     this.numbersOfPost = numbersOfPost;
+//     this.getInfo = function () {
+//         console.log(`Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`)
+//     }
+        
+// }
+
+// const polly = new User({ userName: 'Polly', age: 30, numbersOfPost: 15 });
+// console.log("polly", polly);
+// polly.getInfo();
+// const ivan = new User({ userName: 'Ivan', age: 25, numbersOfPost: 20 });
+// console.log("ivan", ivan);
+// ivan.getInfo();
+
 
 //TODO:===================task-3===========================
 
@@ -51,10 +66,33 @@
 //addItems(item) - отримує новий товар та додає його до поточних
 //removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
 
+// const Storage = function (arrayIn) {
+//     this.items = arrayIn;
+    
+// }
+// Storage.prototype.getItems = function () {
+//     return this.items;
+// };
+// Storage.prototype.addItems = function (item) {
+//     return this.items.push(item);
+// };
+// Storage.prototype.removeItem = function (item) {
+//     const index = this.items.indexOf(item);
+//     if (index !== -1) {
+//         this.items.splice(index, 1);
+//         return this.items
+//     }
+// };
+
+
 // const storage = new Storage(['apple', 'banana', 'mango'])
 
-// console.log(storage)
-// console.log(storage.removeItem('apple'))
+// console.table(storage);
+// console.table(storage.removeItem('apple'));
+// console.table(storage);
+// console.table(storage.addItems('tomato'));
+// console.table(storage);
+
 
 //TODO:===================task-4===========================
 //Напиши клас Client який створює об'єкт
@@ -62,12 +100,38 @@
 //Оголоси приватні властивості #login #email,
 //доступ до яких зроби через геттер та сеттер login email
 
+// class Client {
+//     #login
+//     #email
+//     constructor(login, email) {
+//         this.#login = login
+//         this.#email = email           
+//     }
+
+//     get getClientData() {
+//         return {
+//             login: this.#login,
+//             email: this.#email,
+//         }
+//     }
+
+//     set changeLogin(login) {
+//         this.#login = login
+//     }
+//     set changeEmail(email) {
+//         this.#email = email
+//     }
+
+
+// }
+
 // const client = new Client('mango', 'mango@gmail.com')
 
 // client.changeEmail = 'mango555@gmail.com'
 // console.log(client.getClientData.email)
 // client.changeLogin = '12345'
 // console.log(client.getClientData.login)
+// console.log(client);
 
 //TODO:===================task-5===========================
 //Напиши клас Notes який управляє колекцією нотаток у
